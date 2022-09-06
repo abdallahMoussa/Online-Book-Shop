@@ -1,0 +1,22 @@
+[
+    {
+        "img":"/images/slide1.png",
+        "title":"Build Your Library",
+        "desc":"Buy two selected books and get one for free."        
+    },
+    {
+        "img":"/images/slide2.png",
+        "title":"Do You Love Reading?",
+        "desc":"Get your favorite books by your favorite author."        
+    },
+    {
+        "img":"/images/slide3.png",
+        "title":"Be knowledgeable",
+        "desc":"Get your science books at 50% off."        
+    },
+    {
+        "img":"/images/slide4.png",
+        "title":"Improve your relationship",
+        "desc":"More than 1000 books of romantic books available."        
+    }
+]

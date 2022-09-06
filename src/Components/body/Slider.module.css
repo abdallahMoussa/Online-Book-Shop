@@ -1,0 +1,33 @@
+.slide{
+    background-color: var(--color-kashmir);
+    display: flex;
+    justify-content: space-between;
+    margin: 20px;
+    box-sizing: border-box;
+    color: var(--color-mauve);
+}
+.slide button{
+    background-color: #bb8f6a;
+}
+.slide > div{
+    transition: .5s;
+    opacity: 0;
+}
+.details{
+    position: relative;
+}
+.details button {
+    position: absolute;
+    bottom: 20px;
+}
+@media screen and (max-width: 800px) {
+    .details{
+       width: 100%;
+    }
+    .details h1{
+        font-size: 26pt;
+    }
+    .img{
+        display: none;
+    }
+}

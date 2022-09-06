@@ -1,0 +1,48 @@
+.profileLike{
+    color: var(--color-mauve);
+    font-family:Arial ;
+    justify-content: flex-start;
+    align-items: center;
+}
+.profile{
+    background-color: var(--color-mauve);
+    color: gainsboro;
+    font-size: 16pt;
+    text-align: center;
+}
+.logo img{
+    height: 120%;
+}
+
+.search{
+    color: var(--color-mauve);
+}
+.toggleBt{
+    display: none ;
+    position: absolute;
+    right: 0;
+    top: 40px;
+}
+@media screen and (max-width: 720px) {
+    .toggleBt{
+        display: block;
+    }
+    .Nav{
+        flex-direction: column;
+        justify-content: center;
+    }
+    .Nav > label , .Nav > div:nth-child(3){
+        width: 100%;
+        margin-top: 15px;
+        display: flex;
+        justify-content: center;
+    }
+    .search{
+        position: relative;
+        right: 50px;
+    }
+    .Nav input{
+        left: 0;
+    }
+
+}

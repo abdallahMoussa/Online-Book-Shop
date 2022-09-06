@@ -1,0 +1,214 @@
+.layout{
+    width: 100%;
+    height: 100%;
+    box-sizing: border-box;
+    background-color: rgba(250, 250, 250, .8);
+    left: 0;
+    position: absolute;
+    top: 0;
+    padding-top: 10%;
+    transition: 1s;
+}
+.signUp{
+    width: 300px;
+    height: 400px;
+    border: 1px solid;
+    color: var(--color-main);
+    box-shadow:  0px 0px 5px var(--color-main);
+    background-color: slategrey;
+    border-radius:10px ;
+    position: relative;
+    padding: 10px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin: auto;
+    transition: 1s;
+}
+.bg{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    z-index: 1;
+    overflow: hidden;
+    border-radius: 10px;
+    background-color: var(--color-kashmir);
+}
+.bgChild1{
+    width: 350px;
+    height: 400px;
+    background-color: var(--color-mauve);
+    border-radius: 30px;
+    transform: rotate(40deg);
+    position: absolute;
+    right: -45%;
+    top:-1%;
+    z-index: 10;
+    opacity: 1;
+}
+.bgChild2{
+    width: 300px;
+    height: 500px;
+    background-color: black;
+    border-radius: 30px;
+    transform: rotate(40deg);
+    position: absolute;
+    right: -52%;
+    top:-60%;
+    z-index: 3;
+}
+.bgChild3{
+    width: 200px;
+    height: 300px;
+    background-color: black;
+    border-radius: 30px;
+    transform: rotate(40deg);
+    position: absolute;
+    left: -35%;
+    bottom:-55%;
+    z-index: 1000000;
+}
+
+.close{
+    width: 30px;
+    height: 30px;
+    background-color: black;
+    border: var(--color-main);
+    box-shadow: inset 0px 0px 5px var(--color-main);
+    border-radius: 50%;
+    padding-top: 2px;
+    text-align: center;
+    font-size: 14pt;
+    position: absolute;
+    left: -13px;
+    top: -13px;
+    cursor: pointer;
+    box-sizing: border-box;
+    color: white;
+    transition: .5s;
+    z-index: 10;
+}
+.close:hover{
+    box-shadow: 1px 1px 10px var(--color-main);
+    color: var(--color-main);
+    transition: .5s;
+    background-color: gainsboro;
+}
+.close:active{
+    background-color: black;
+}
+.SignDetails{
+    width: 100%;
+    height: 80%;
+    position: relative;
+    z-index: 1000;
+}
+.title{
+    width: 100%;
+    height: 30px;
+    text-align: center;
+    margin-bottom: 45px;
+}
+.title h1 span{
+    font-family: Arial;
+    font-weight: lighter;
+    font-size: 25pt;
+    color:white;
+    letter-spacing: -2px;
+    text-shadow: 1px 1px 2px black;
+}
+.title h1 span:last-child{
+    background-color: var(--color-main);
+    padding: 2px 3px;
+    color: white;
+    border-radius: 7px 0;
+}
+.title > h1{
+    margin: 40px 0 0 -20px;
+    display: block;
+}
+.SignForm{
+    position: relative;
+    height: 200px;
+    padding-top: 10px;
+}
+.fullName , .email , .password{
+    display: flex;
+    width: 100%;
+    flex-wrap: wrap;
+    align-items: right;
+    justify-content: flex-end;
+}
+
+.input:focus{
+    outline: 0px ;
+    transition: 1s;
+    background-color: rgba(0,41,55,.9);
+    color: white;
+}
+.input{
+    width: 70%;
+    height: 30px;
+    font-size: 10pt;
+    background-color: var(--color-kashmir);
+    padding: 5px;
+    border: 1px solid var(--color-mauve);
+    box-shadow: inset 0 0 2px black;
+    border-radius: 5px;
+    color: var(--color-mauve);
+    font-family: Arial;
+    font-weight: lighter;
+    transition: 1s;
+    z-index: 2;
+    position: relative;
+    outline: 0;
+}
+.submit{
+    background-color: black;
+    color: white;
+    text-shadow: 1px 1px 2px black;
+    position: absolute;
+    border: 0px;
+    bottom: -60px;
+    right: 10px;
+    font-size: 18pt;
+    font-family: Arial;
+    letter-spacing: -2px;
+    font-weight: lighter;
+    cursor: pointer;
+    width: 100px;
+    height: 40px;
+    border-radius: 6px;
+    transition: 1s;
+}
+.submit:hover {
+    opacity: .9;
+    background-color: var(--color-kashmir);
+    transition: .8s;
+    color: var(--color-mauve);
+}
+.submit:active{
+    background-color: var(--color-main);
+    color:white ;
+    transition: .2s;
+}
+.error{
+    color: darkred;
+    position: relative;
+    left: 10px;
+    top: -3px;
+    font-size: 12pt;
+    font-family: 'agency';
+    height: 18px;
+    width: 200px;
+    margin-bottom: 2px;
+    text-align: left;
+}
+.error i{
+    color: green;
+    position: absolute;
+    right: 50px;
+    top: -25px;
+    z-index: 9999;
+}

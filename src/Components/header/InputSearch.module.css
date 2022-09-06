@@ -1,0 +1,126 @@
+.searchCont{
+    width: 100%;
+    display: flex;
+    transition: 1s;
+    flex-wrap: wrap;
+    position: relative;
+    padding: 0 50px;
+    
+}
+.inputSearch{
+    width: 100%;
+    outline: none;
+    height: 40px;
+    border-radius: 7px;
+    border: 2px solid var(--color-main);
+    font-size: 16pt;
+    padding: 3px 10px;
+    box-sizing: border-box;
+    font-family: 'Lucida Sans Unicode';
+    transition: 1s;
+    background-color: rgba(0, 0, 0,.1);
+}
+
+.inputSearch:focus~ .suggest {
+    width: calc(100% - 100px);
+    height: auto;
+}
+
+.search{
+    font-size: 16pt;
+    background-color: transparent;
+    width: 50px;
+    border-radius: 0 6px 6px 0;
+    border: 0px;
+    height: 38px;
+    margin-left: -50px;
+    cursor: pointer;
+    color: var(--color-mauve);
+    transition: .1s;
+}
+.search:hover{
+    color: gray;
+    text-shadow: 1px 1px 2px  
+}
+.search:active{
+    opacity: .9;
+    color: black;
+}
+.search span{
+    display:block;
+    font-size: 20pt;
+    transform: rotate(-45deg);
+}
+.suggest{
+    width: 50%;
+    height: 0px;
+    padding: 0px;
+    max-height: 500px;
+    position: absolute;
+    margin-top: 40px;
+    border-radius:5px ;
+    background-color:rgba(65, 59, 137,.9);
+    z-index: 10;
+    transition: 1s;
+    display: flex;
+    flex-direction: column;
+    gap: 3px;
+    overflow: hidden;
+}
+.suggest:active{
+    height: auto;
+}
+.suggest span{
+    transition: .5s;
+    padding-left: 12px;
+    width: 100%;
+}
+
+.suggest span:last-child{
+    margin-bottom: 5px;
+}
+.suggest a{
+    text-decoration: none;
+    color: inherit;
+    width: 100%;
+    display: inline-block;
+}
+.suggest span:hover{
+    background-color: gainsboro;
+    cursor: pointer;
+    transition: .5s;
+    color: var(--color-main);
+}
+.suggest span:first-child{
+    margin-top: 8px;
+}
+.clear{
+    color: darkgray;
+    position: absolute;
+    right: 100px;
+    top: 3px;
+    font-size: 16pt;
+    cursor: pointer;
+    transition: .5s;
+    display: none ;
+}
+.clear:hover{
+    text-shadow: 0 0 1px black;
+    color: gray;
+}
+.clear:active{
+    transition: .3s;
+    color: gray;
+    text-shadow: 0 0 5px var(--color-main);
+}
+
+@media screen and (max-width: 800px) {
+    .searchCont{
+        padding: 0 20px;
+        display: flex;
+        justify-content: flex-end;
+    }
+    .suggest{
+        width: 90%;
+    }
+}

@@ -1,0 +1,22 @@
+.authorName{
+    width: 100%;
+    height: 25px;
+    overflow: hidden;
+    position: relative;
+    margin-top: 3px;
+}
+.authorName:nth-child(2){
+    height: 17px;
+}
+.authorName:nth-child(2)::after{
+    top: 0;
+}
+.authorName::after{
+    content: '';
+    width: 30px;
+    height: 100%;
+    position: absolute;
+    right: 0;
+    top: 6px;
+    background: linear-gradient(to right , transparent  ,white,  white );
+}
