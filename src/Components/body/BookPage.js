@@ -11,7 +11,7 @@ const BookPage = props=>{
     const [loaded , setLoaded] = useState(false);
     const BookPageRef = useRef();
     const liked = useRef();
-    let {bookId} = useParams();
+    const {bookId} = useParams();
     
     let rate = BookRate(book["download_count"])
     
@@ -41,12 +41,11 @@ const BookPage = props=>{
                    }
                 }
             }
-            setBookCommit(flase)
+            setBookCommit(false)
         }catch(error){
             alert(error.message)
         }
     }
-
     async function actionHanddler(action){
         try{
             const response = await fetch('https://react-backend-49bcf-default-rtdb.firebaseio.com/ReaderBooks.json')
@@ -129,7 +128,7 @@ const BookPage = props=>{
                
                setBook(...result);
                setLoaded(true);
-                setBookCommit(true)
+               setBookCommit(true);
            })
            
        }catch(error){
@@ -137,7 +136,7 @@ const BookPage = props=>{
        }
     }
     
- useEffect(()=>{
+    useEffect(()=>{
         if(bookCommit){
             BookPageRef.current.classList.remove('fadeOut')
             BookPageRef.current.classList.add('fadeIn')
@@ -147,6 +146,7 @@ const BookPage = props=>{
             getBook()
         }
     },[bookId,book])
+
    return<>
        {loaded&& (<div ref={BookPageRef} className="fadeOut BookPage w-full px-5 pt-10 flex flex-wrap justify-center mb-16" >
                     <div className="bookImg w-72 h-96 rounded-xl shadow-lg shadow-purple-800 bg-black overflow-hidden">
