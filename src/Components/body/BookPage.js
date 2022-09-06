@@ -6,6 +6,7 @@ import Loader from "./Loader";
 const BookPage = props=>{
     
     const [book,setBook] = useState({});
+    const [bookCommit , setBookCommit] = useState(false)
     const [Liked,setLiked] = useState(false);
     const [loaded , setLoaded] = useState(false);
     const BookPageRef = useRef();
@@ -40,6 +41,7 @@ const BookPage = props=>{
                    }
                 }
             }
+            setBookCommit(flase)
         }catch(error){
             alert(error.message)
         }
@@ -127,6 +129,7 @@ const BookPage = props=>{
                
                setBook(...result);
                setLoaded(true);
+                setBookCommit(true)
            })
            
        }catch(error){
@@ -134,16 +137,16 @@ const BookPage = props=>{
        }
     }
     
-        useEffect(()=>{
-        if(Object.keys(book).length){
+ useEffect(()=>{
+        if(bookCommit){
             BookPageRef.current.classList.remove('fadeOut')
             BookPageRef.current.classList.add('fadeIn')
             isLiked()
         }else{
+            console.log('getBook')
             getBook()
         }
-    },[book,bookId])
-
+    },[bookId,book])
    return<>
        {loaded&& (<div ref={BookPageRef} className="fadeOut BookPage w-full px-5 pt-10 flex flex-wrap justify-center mb-16" >
                     <div className="bookImg w-72 h-96 rounded-xl shadow-lg shadow-purple-800 bg-black overflow-hidden">
