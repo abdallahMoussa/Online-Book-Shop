@@ -3,7 +3,14 @@
 
 React Online Book Shop 
 
-# Tech:
+# Features:
+- Login & Signup.
+- Pagination.. "move between a thousand pages to display a thousand books"
+- Searching "Favorite Author or Book Title".
+- Liking, Reading or Downloading Book is available.
+- Profiling with logs data show "How many Books are you read, loved and downloaded"
+- 
+- # Tech:
 - html 
 - Css modules
 - Tailwind
