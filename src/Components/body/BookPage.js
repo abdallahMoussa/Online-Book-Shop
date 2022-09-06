@@ -170,7 +170,7 @@ const BookPage = props=>{
                                 className="py-2 px-6 h-12 cursor-pointer bg-purple-800 rounded-md text-2xl mr-5 text-white hover:bg-purple-600">
                                 Read
                             </a>
-                            <a  target="_blank" href={book["formats"]["application/zip"]} download onClick={()=>actionHanddler('D')}
+                            <a  target="_blank" href={book["formats"]["application/epub+zip"]} download onClick={()=>actionHanddler('D')}
                                 className="py-2 h-12 px-6 cursor-pointer bg-slate-900 rounded-md text-2xl mr-5 text-white hover:bg-slate-600">
                                 Download
                             </a>
