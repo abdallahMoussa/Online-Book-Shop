@@ -134,14 +134,16 @@ const BookPage = props=>{
        }
     }
     
-    useEffect(()=>{
-        Object.keys(book).length?isLiked():getBook()
+        useEffect(()=>{
+        if(Object.keys(book).length){
+            BookPageRef.current.classList.remove('fadeOut')
+            BookPageRef.current.classList.add('fadeIn')
+            isLiked()
+        }else{
+            getBook()
+        }
     },[book,bookId])
 
-    if(BookPageRef.current){
-        BookPageRef.current.classList.remove('fadeOut')
-        BookPageRef.current.classList.add('fadeIn')
-    }
    return<>
        {loaded&& (<div ref={BookPageRef} className="fadeOut BookPage w-full px-5 pt-10 flex flex-wrap justify-center mb-16" >
                     <div className="bookImg w-72 h-96 rounded-xl shadow-lg shadow-purple-800 bg-black overflow-hidden">
