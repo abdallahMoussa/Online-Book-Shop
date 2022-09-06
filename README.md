@@ -8,7 +8,7 @@ React Online Book Shop
 - Tailwind
 - ReactJs
 
-- authentication => noSql Data Base "Firebase realtime database"
+- authentication & profiling => noSql Data Base "Firebase realtime database"
 - api books data => https://gutendex.com/
 - Ui Design => https://dribbble.com/shots/14240831-Booksy-Online-Book-Shop
 
