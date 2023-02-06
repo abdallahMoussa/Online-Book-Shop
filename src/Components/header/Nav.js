@@ -50,7 +50,7 @@ const Nav= props =>{
                                 </Link>
                                 
                                 <div  onClick={showList} className={`${styles.profile} w-10 h-10 rounded-full shadow-md pt-1 duration-300 relative `}>
-                                    <span className='cursor-pointer'>{localStorage.getItem('Name')[0].toUpperCase()}</span>
+                                    <span className='cursor-pointer'>{localStorage.getItem('Name')&&localStorage.getItem('Name')[0].toUpperCase()}</span>
                                     <div ref={profileList} alt="hide" className='profileList opacity-0 duration-300 absolute w-28 h-22 text-lg font-thin rounded-md -left-10 top-14 z-10 bg-slate-400 py-3 '>
                                         <span className='arrow w-5 h-5 block bg-slate-400 absolute -top-2 left-12 rotate-45'></span>
                                         <Link to="/profile">

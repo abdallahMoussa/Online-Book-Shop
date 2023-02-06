@@ -20,11 +20,18 @@ function App() {
   const [isLogin , setLogin] = useState(false)
 
   const Login=(TorF)=>{
-    localStorage.setItem("isLogin",'true');
+    if(TorF){
+      localStorage.setItem("isLogin",true);
+    }else{
+      localStorage.setItem("isLogin",false);
+    }
     setLogin(prev=>TorF)
   }
 
   useEffect(()=>{
+    if(localStorage.getItem('isLogin')=='true'){
+      setLogin(true);
+    }
   },[])
 
   return (

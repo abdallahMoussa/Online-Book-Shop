@@ -142,7 +142,6 @@ const BookPage = props=>{
             BookPageRef.current.classList.add('fadeIn')
             isLiked()
         }else{
-            console.log('getBook')
             getBook()
         }
     },[bookId,book])

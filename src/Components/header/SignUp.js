@@ -82,7 +82,9 @@ const SignUp = (props)=>{
             }
         })
         if(response.ok){
-            props.Login(true)
+            props.Login(true);
+            localStorage.setItem('Name',name.current.value)
+            localStorage.setItem('userId',name.current.value)
             setTimeout(() => {
                 Navigate('/')
             }, 1000);  
@@ -136,7 +138,7 @@ const SignUp = (props)=>{
                             <Link to="/login">I Have Account</Link>
                         </div>
                         
-                        <input className={styles.submit} type="submit" value="Sign Up" />
+                        <input className={styles.submit} type="submit" value="Sign Up"  />
                     </form>
 
                 </div>
